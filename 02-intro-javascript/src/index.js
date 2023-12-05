@@ -1,23 +1,9 @@
+// Async - await
 
-const personajes = ['Goku','Vegeta','Trunks'];
-const [ , , p3] = personajes;
-//console.log( p3 );
-
-const retornaArreglo =()=>{
-    return ['ABC',123 ]
+const getImagenPromesa = ()=>{
+    return new Promise( (resolve, reject) =>{
+        resolve('http://sjsjsjajajaja.com')
+    })
 }
 
-//console.log(retornaArreglo);
-const [ letras, numeros ] = retornaArreglo();
-
-//console.log(letras , numeros)
-
-const usoEstado = ( valor )=>{
-    return [ valor , ()=>{ console.log('Hola Mundo') }] ;
-}
-
-const [ nombre , setNombre ] = usoEstado('Goku'); 
-console.log(nombre);
-setNombre();
-
-
+getImagenPromesa().then( console.log);
