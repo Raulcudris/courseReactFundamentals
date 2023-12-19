@@ -1,2 +1,2 @@
-# Started of course (JavaScript-Recat) with Create React App
+# Started of course (JavaScript-React) with Create React App
  Projects of Example.
