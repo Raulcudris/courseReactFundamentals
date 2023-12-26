@@ -1,61 +1,67 @@
-import { useEffect, useState } from "react";
-import { Message } from "./Message";
+import { useEffect, useState } from 'react';
+import { Message } from './Message';
+
 
 export const SimpleForm = () => {
-  const [formState, setFormState] = useState({
-      username: 'strider',
-      email : 'raulcudriz@hotmail.com'
-  });
 
-  const { email , username } = formState;
+    const [formState, setFormState] = useState({
+        username: 'strider',
+        email: 'fernando@google.com'
+    });
 
-  const onInputChange = ( { target } ) =>{
-    const { name , value } = target;
-    setFormState({
-      ...formState,
-      [ name ]: value
-    })
-  }
+    const { username, email } = formState;
 
-  useEffect(() => {
-      //console.log('use Efect')
-  }, [])
-
-  useEffect(() => {
-      //console.log('FormState Changed!')
-  }, [formState])
-  
-  useEffect(() => {
-    //console.log('email Changed!')
-   }, [email])
+    const onInputChange = ({ target }) => {
+        const { name, value } = target;
+        setFormState({
+            ...formState,
+            [ name ]: value
+        });
+    }
 
 
-  return (
-    <>
-    <h1>Formulario Simple</h1>
-    <hr/>
+    useEffect( () => {
+        // console.log('useEffect called!');
+    }, []);
+    
+    useEffect( () => {
+        // console.log('formState changed!');
+    }, [formState]);
 
-    <input 
-        type="text"
-        className="form-control"
-        placeholder="Username"
-        name="username"
-        value={ username }
-        onChange={ onInputChange }
-    />
+    useEffect( () => {
+        // console.log('email changed!');
+    }, [ email ]);
 
-    <input 
-        type="email"
-        className="form-control mt-2"
-        placeholder="raulcudriz@gmail.com"
-        name="email"
-        value={ email }
-        onChange={ onInputChange }
-    />
-      {
-        (username === 'strider2') &&  <Message />
-      }   
+    
 
-    </>
-  )
+    return (
+        <>
+            <h1>Formulario Simple</h1> 
+            <hr />
+
+            <input 
+                type="text" 
+                className="form-control"
+                placeholder="Username"
+                name="username"
+                value={ username }
+                onChange={ onInputChange }
+            />
+
+            <input 
+                type="email" 
+                className="form-control mt-2"
+                placeholder="fernando@google.com"
+                name="email"
+                value={ email }
+                onChange={ onInputChange }
+            />
+
+
+            {
+                (username === 'strider2' ) && <Message />
+            }
+
+        </>
+    )
 }
