@@ -1,2 +1,2 @@
-# Started of course (JavaScript-React) with Create React App
+# React Basics with JavaScript
  Projects of Example.
