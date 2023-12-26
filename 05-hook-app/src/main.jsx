@@ -1,5 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
 
 
 // import { HooksApp } from './HooksApp';
@@ -13,13 +11,12 @@ import ReactDOM from 'react-dom/client';
 // import { Memorize } from './06-memos/Memorize';
 // import { MemoHook } from './06-memos/MemoHook';
 // import { CallbackHook } from './06-memos/CallbackHook';
-import { Padre } from './07-tarea-memo/Padre';
-
+import './08-useReducer/intro-reducer';
 
 import './index.css';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  // <React.StrictMode>
-    <Padre />
-  // </React.StrictMode>
-)
+// ReactDOM.createRoot(document.getElementById('root')).render(
+//   // <React.StrictMode>
+//     <Padre />
+//   // </React.StrictMode>
+// )
