@@ -10,7 +10,7 @@ describe('Pruebas en el <TodoApp />', () => {
             { id:1, description:'Todo #1' , done: false },
             { id:2, description:'Todo #2' , done: true  },
         ],
-        todosCount: 2   , 
+        todosCount: 2, 
         pendingTodosCount: 1, 
         handleDeleteTodo:  jest.fn(), 
         handleToggleTodo:  jest.fn(), 
@@ -24,7 +24,7 @@ describe('Pruebas en el <TodoApp />', () => {
         expect( screen.getByText('Todo #2')).toBeTruthy();
         expect( screen.getByRole('textbox')).toBeTruthy();
 
-        console.log(screen.getByRole('textbox').innerHTML);
+        //console.log(screen.getByRole('textbox').innerHTML);
     }); 
     
 });
