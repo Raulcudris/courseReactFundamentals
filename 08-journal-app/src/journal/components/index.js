@@ -1,3 +1,6 @@
-export { Navbar } from "./Navbar";
-export { Sidebar } from "./Sidebar";
+export { ImageGallery } from './ImageGallery';
+export { NavBar } from './Navbar';
+export { SideBar } from './Sidebar';
+
+
 
