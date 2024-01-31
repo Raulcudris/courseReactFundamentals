@@ -4,7 +4,7 @@ import { useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link as RouterLink } from 'react-router-dom';
 import { useForm } from '../../hooks';
-import { checkingAuthentication, startGoogleSignIn } from '../../store/auth/thunks';
+import { startGoogleSignIn, startLoginWithEmailPassword } from '../../store/auth/thunks';
 import { AuthLayout } from '../layout/AuthLayout';
 
 
@@ -23,7 +23,7 @@ export const LoginPage = () => {
   const onSubmit = ( event ) =>{
     event.preventDefault();
     console.log({ email , password })
-    dispatch( checkingAuthentication());
+    dispatch( startLoginWithEmailPassword({ email , password }));
   }
 
   const onGoogleSignIn = (  ) =>{
