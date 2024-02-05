@@ -1,5 +1,5 @@
-export { NoteView } from "./NoteView";
+export * from './NoteView';
 
-export { NothingSelectedView } from "./NothingSelectedView";
+export * from './NothingSelectedView';
 
 
