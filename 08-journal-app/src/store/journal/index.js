@@ -1,3 +1,2 @@
-export * from './journalSlice.js';
-export * from './thunks.js';
-
+export * from './journalSlice';
+export * from './thunks';

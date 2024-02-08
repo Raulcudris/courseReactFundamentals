@@ -1,4 +1,2 @@
-export { AppTheme } from './AppTheme';
-export { purpleTheme } from './purpleTheme';
-
-
+export * from './AppTheme';
+export * from './purpleTheme';
