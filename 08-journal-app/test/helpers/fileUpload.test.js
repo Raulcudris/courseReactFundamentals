@@ -6,8 +6,9 @@ describe('Pruebas en el fileUpload', () => {
         
         const imageUrl ='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNSjtKXUaRqf6sU2nxqi1-6TiTkkzTLPHKVw&usqp=CAU';
     
-        const resp = await fetch( imageUrl );
-        const blob = await resp.blob;
+        const res = await fetch( imageUrl );
+
+        const blob = await res.blob();
         const file = new File( blob ,'foto.jpg');
         
         const url = await fileUpload( file);
