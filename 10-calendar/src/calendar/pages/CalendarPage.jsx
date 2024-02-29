@@ -1,9 +1,11 @@
-import { useState } from "react";
-import { Calendar } from "react-big-calendar";
-import "react-big-calendar/lib/css/react-big-calendar.css";
-import { getMessagesEs, localizer } from "../../helpers/index";
-import { useCalendarStore, useUiStore } from "../../hooks";
-import { CalendarEvent, CalendarModal, FabAddNew, Navbar } from "../index";
+import { useState } from 'react';
+import { Calendar } from 'react-big-calendar';
+import 'react-big-calendar/lib/css/react-big-calendar.css';
+import { CalendarEvent, CalendarModal, FabAddNew, Navbar } from '../';
+import { getMessagesES, localizer } from '../../helpers';
+import { useCalendarStore, useUiStore } from '../../hooks';
+import { FabDelete } from '../components/FabDelete';
+
 
 export const CalendarPage = () => {
 
@@ -41,8 +43,6 @@ export const CalendarPage = () => {
     setLastView( event )
   }
 
-
-
   return (
     <>
       <Navbar />
@@ -55,7 +55,7 @@ export const CalendarPage = () => {
         startAccessor="start"
         endAccessor="end"
         style={{ height: 'calc( 100vh - 80px )' }}
-        messages={ getMessagesEs() }
+        messages={ getMessagesES() }
         eventPropGetter={ eventStyleGetter }
         components={{
           event: CalendarEvent
@@ -64,8 +64,10 @@ export const CalendarPage = () => {
         onSelectEvent={ onSelect }
         onView={ onViewChanged }
       />
-      <CalendarModal />
+
+      <CalendarModal />      
       <FabAddNew />
+      <FabDelete />
     </>
-  );
-};
+  )
+}
