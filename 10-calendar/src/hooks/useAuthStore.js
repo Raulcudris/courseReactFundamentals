@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { calendarApi } from "../api";
+import { onchecking } from "../store";
 
  
  export const useAuthStore = () =>{
@@ -7,7 +8,7 @@ import { calendarApi } from "../api";
     const dispatch = useDispatch();
 
     const startLogin = async({ email, password })=>{
-        dispatch( onChecking() )
+        dispatch( onchecking() )
        try {
            const { data } = await calendarApi.post('/auth',{email ,password});
            localStorage.setItem('token', data.token );
